@@ -2,6 +2,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 import 'package:rasca/views/loginV2_view.dart';
 import 'package:rasca/views/transitionsRoutes_view.dart';
+import 'package:rasca/views/UsuarioPerfil.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -59,7 +60,7 @@ class MyApp extends StatelessWidget {
       navigatorObservers: [TransitionRouteObserver()],
       initialRoute: MyHomePage.routeName,
       routes: {
-        MyHomePage.routeName: (context) => MyHomePage(),
+        PerfilUsuario.routeName: (context) => PerfilUsuario(),
       },
     );
   }
