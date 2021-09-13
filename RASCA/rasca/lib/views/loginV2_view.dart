@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:rasca/controllers/login_controller.dart';
+import 'package:rasca/views/logout_view.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage();
@@ -53,14 +55,20 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
 
-    final loginButon = Material(
+    final loginButton = Material(
       elevation: 5.0,
       borderRadius: BorderRadius.circular(30.0),
       color: Color(0xFFFFCD00),
       child: MaterialButton(
         minWidth: MediaQuery.of(context).size.width,
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-        onPressed: () {},
+        onPressed: () {
+          // Navegar a próxima página
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => FirstRoute()),
+          );
+        },
         child: Text("Login",
             textAlign: TextAlign.center,
             style: style.copyWith(
@@ -94,7 +102,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 SizedBox(
                   height: 35.0,
                 ),
-                loginButon,
+                loginButton,
                 SizedBox(
                   height: 15.0,
                 ),
