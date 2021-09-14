@@ -114,12 +114,14 @@ class _PerfilUsuario extends State<PerfilUsuario> {
             )
           ),
         Container(
+          child: Padding(padding: const EdgeInsets.all(12),
           child: RaisedButton.icon(onPressed: (){}, 
           icon: Icon(Icons.edit), 
-          label: Text('Cambiar contraseña',
+          label: Text('Cambiar\ncontraseña',
           style: TextStyle(fontSize: 17),),
           color: Color(0xFFFFCD00),
               ),
+              )
             ),
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
