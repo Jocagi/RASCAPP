@@ -2,6 +2,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 import 'package:rasca/views/loginV2_view.dart';
 import 'package:rasca/views/transitionsRoutes_view.dart';
+import 'package:rasca/views/CrearActividad.dart';
 import 'package:rasca/views/UsuarioPerfil.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Login URL',
+      title: 'Crear Actividad',
       theme: ThemeData(
         brightness: Brightness.light,
         scaffoldBackgroundColor: Color(0xFF00205B),
@@ -58,9 +59,9 @@ class MyApp extends StatelessWidget {
         ),
       ),
       navigatorObservers: [TransitionRouteObserver()],
-      initialRoute: MyHomePage.routeName,
+      initialRoute: Actividad.routeName,
       routes: {
-        PerfilUsuario.routeName: (context) => PerfilUsuario(),
+        Actividad.routeName: (context) => Actividad(),
       },
     );
   }
