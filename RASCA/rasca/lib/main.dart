@@ -4,6 +4,7 @@ import 'package:rasca/views/loginV2_view.dart';
 import 'package:rasca/views/transitionsRoutes_view.dart';
 import 'package:rasca/views/CrearActividad.dart';
 import 'package:rasca/views/UsuarioPerfil.dart';
+import 'package:rasca/views/Restricciones.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -31,9 +32,7 @@ class MyApp extends StatelessWidget {
           headline3: TextStyle(
             fontFamily: 'OpenSans',
             fontSize: 45.0,
-            // fontWeight: FontWeight.w400,
-            //color: Colors.yellow,
-          ),
+            ),
           button: TextStyle(
             // OpenSans is similar to NotoSans but the uppercases look a bit better IMO
             fontFamily: 'OpenSans',
@@ -59,9 +58,9 @@ class MyApp extends StatelessWidget {
         ),
       ),
       navigatorObservers: [TransitionRouteObserver()],
-      initialRoute: Actividad.routeName,
+      initialRoute: MyHomePage.routeName,
       routes: {
-        Actividad.routeName: (context) => Actividad(),
+        MyHomePage.routeName: (context) => MyHomePage(),
       },
     );
   }

@@ -9,6 +9,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  bool ishidePassword = true;
   //Custom text style to apply to UI elements
   TextStyle style = TextStyle(
     fontFamily: 'Montserrat',
@@ -36,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ));
 
     final passwordField = TextField(
-      obscureText: true,
+      obscureText: ishidePassword,
       style: style,
       decoration: InputDecoration(
         enabledBorder: OutlineInputBorder(
@@ -49,6 +50,9 @@ class _MyHomePageState extends State<MyHomePage> {
         fillColor: Colors.white,
         contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
         hintText: "Contraseña",
+        suffixIcon: InkWell(
+          onTap: _togglePasswordView,
+          child: Icon(Icons.visibility),),
         hintStyle: new TextStyle(color: Colors.grey),
       ),
     );
@@ -104,5 +108,11 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
     );
+  }
+
+  void _togglePasswordView(){
+  setState(() {
+    ishidePassword = !ishidePassword;
+  });
   }
 }
