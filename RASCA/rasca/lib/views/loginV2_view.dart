@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rasca/views/UsuarioPerfil.dart';
+import 'package:rasca/controllers/login_controller.dart';
+import 'package:rasca/views/logout_view.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage();
@@ -59,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
     );
 
-    final loginButon = Material(
+    final loginButton = Material(
       elevation: 5.0,
       borderRadius: BorderRadius.circular(30.0),
       color: Color(0xFFFFCD00),
@@ -105,7 +107,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 SizedBox(
                   height: 35.0,
                 ),
-                loginButon,
+                loginButton,
                 SizedBox(
                   height: 15.0,
                 ),
