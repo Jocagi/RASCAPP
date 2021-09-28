@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Crear Actividad',
+      title: 'URL',
       theme: ThemeData(
         brightness: Brightness.light,
         scaffoldBackgroundColor: Color(0xFF00205B),
@@ -32,6 +32,8 @@ class MyApp extends StatelessWidget {
           headline3: TextStyle(
             fontFamily: 'OpenSans',
             fontSize: 45.0,
+            // fontWeight: FontWeight.w400,
+            //color: Colors.yellow,
             ),
           button: TextStyle(
             // OpenSans is similar to NotoSans but the uppercases look a bit better IMO

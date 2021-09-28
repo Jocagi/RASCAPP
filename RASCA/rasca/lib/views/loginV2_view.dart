@@ -50,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
         filled: true,
         fillColor: Colors.white,
         contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-        hintText: "ContraseÃ±a",
+        hintText: "Contraseña",
         suffixIcon: InkWell(
           onTap: _togglePasswordView,
           child: Icon(Icons.visibility),
