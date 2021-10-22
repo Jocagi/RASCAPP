@@ -1,8 +1,8 @@
 name: rasca
-description: A new Flutter project.
+description: App para registro de servicio comunitario URL.
 
 # The following line prevents the package from being accidentally published to
-# pub.dev using `pub publish`. This is preferred for private packages.
+ # pub.dev using `pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 # The following defines the version and build number for your application.
@@ -27,9 +27,7 @@ dependencies:
   flutter_svg: ^0.22.0
   modal_progress_hud_nsn: ^0.1.0-nullsafety-1
   flutter_login: ^2.2.1
-
-  
-
+  http: ^0.13.3
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -51,9 +49,16 @@ flutter:
   # the material Icons class.
   uses-material-design: true
 
-uses-material-design: true
   # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/images/
+
+  fonts:
+        - family: Montserrat
+          fonts:
+            - asset: assets/fonts/Montserrat-Regular.ttf
 
 scripts:
   build: pub run build_runner build --delete-conflicting-outputs
   watch: pub run build_runner watch --delete-conflicting-outputs
+

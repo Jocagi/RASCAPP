@@ -1,7 +1,10 @@
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
-import 'package:rasca/views/login_view.dart';
+import 'package:rasca/views/loginV2_view.dart';
 import 'package:rasca/views/transitionsRoutes_view.dart';
+import 'package:rasca/views/CrearActividad.dart';
+import 'package:rasca/views/UsuarioPerfil.dart';
+import 'package:rasca/views/Restricciones.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -17,12 +20,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Login Demo',
+      title: 'URL',
       theme: ThemeData(
         brightness: Brightness.light,
-        scaffoldBackgroundColor: Colors.blue[900],
-        primaryColor: Colors.blue[900],
-        accentColor: Colors.white,
+        scaffoldBackgroundColor: Color(0xFF00205B),
+        primaryColor: Colors.blue,
+        accentColor: Colors.yellow,
         textSelectionTheme: TextSelectionThemeData(cursorColor: Colors.white),
         // fontFamily: 'SourceSansPro',
         textTheme: TextTheme(
@@ -30,11 +33,13 @@ class MyApp extends StatelessWidget {
             fontFamily: 'OpenSans',
             fontSize: 45.0,
             // fontWeight: FontWeight.w400,
-            color: Colors.white,
-          ),
+            //color: Colors.yellow,
+            ),
           button: TextStyle(
             // OpenSans is similar to NotoSans but the uppercases look a bit better IMO
             fontFamily: 'OpenSans',
+            //color: Color(0xff01A0C7)
+            //color: Colors.yellow
           ),
           caption: TextStyle(
             fontFamily: 'NotoSans',
@@ -55,9 +60,9 @@ class MyApp extends StatelessWidget {
         ),
       ),
       navigatorObservers: [TransitionRouteObserver()],
-      initialRoute: LoginScreen.routeName,
+      initialRoute: MyHomePage.routeName,
       routes: {
-        LoginScreen.routeName: (context) => LoginScreen(),
+        MyHomePage.routeName: (context) => MyHomePage(),
       },
     );
   }
