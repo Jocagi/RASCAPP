@@ -149,6 +149,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
+      backgroundColor: Color(0xFF00205B),
       body: Center(
         child: Container(
           child: Padding(
