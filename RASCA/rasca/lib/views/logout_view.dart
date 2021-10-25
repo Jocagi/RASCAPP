@@ -36,11 +36,11 @@ class LogoutScreen extends StatelessWidget {
         ),
       ),
       onPressed: () {
-        // Navigate to second route when tapped.
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => MyHomePage()),
-        );
+        // Navigate Login page route when tapped.
+        Navigator.pushAndRemoveUntil(
+            context,
+            MaterialPageRoute(builder: (context) => MyHomePage()),
+            ModalRoute.withName("/Home"));
       },
     );
 
