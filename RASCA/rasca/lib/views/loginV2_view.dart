@@ -6,6 +6,7 @@ import 'package:rasca/controllers/login_controller.dart';
 import 'package:rasca/views/logout_view.dart';
 import 'package:http/http.dart' as http;
 import 'package:rasca/Clases/login.dart';
+
 class MyHomePage extends StatefulWidget {
   MyHomePage();
   static const routeName = '/auth';
@@ -15,7 +16,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   void dispose() {
     // Clean up the controller when the widget is disposed.
     userController.dispose();
@@ -99,7 +99,7 @@ class _MyHomePageState extends State<MyHomePage> {
         filled: true,
         fillColor: Colors.white,
         contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-        hintText: "Contraseña",
+        hintText: "ContraseÃ±a",
         suffixIcon: InkWell(
           onTap: _togglePasswordView,
           child: Icon(Icons.visibility),
@@ -109,7 +109,6 @@ class _MyHomePageState extends State<MyHomePage> {
     );
 
     final loginButton = Material(
-
       elevation: 5.0,
       borderRadius: BorderRadius.circular(30.0),
       color: Color(0xFFFFCD00),
@@ -213,11 +212,5 @@ class _MyHomePageState extends State<MyHomePage> {
         );
       },
     );
-  }
-
-  void _togglePasswordView(){
-  setState(() {
-    ishidePassword = !ishidePassword;
-  });
   }
 }
