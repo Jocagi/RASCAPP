@@ -15,6 +15,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
   void dispose() {
     // Clean up the controller when the widget is disposed.
     userController.dispose();
@@ -212,5 +213,11 @@ class _MyHomePageState extends State<MyHomePage> {
         );
       },
     );
+  }
+
+  void _togglePasswordView(){
+  setState(() {
+    ishidePassword = !ishidePassword;
+  });
   }
 }

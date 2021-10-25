@@ -22,7 +22,6 @@ class _PerfilUsuario extends State<PerfilUsuario> {
 
     return MaterialApp(
        title: 'Flutter Demo',
-       
   theme: ThemeData(
        appBarTheme: AppBarTheme(
      color: Color(0xFF00205B),
