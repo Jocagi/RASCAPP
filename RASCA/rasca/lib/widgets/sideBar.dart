@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rasca/views/CrearActividad.dart';
 import 'package:rasca/views/UsuarioPerfil.dart';
+import 'package:rasca/views/approveActivityList_view.dart';
 import 'package:rasca/views/dashboard_view.dart';
 import 'package:rasca/views/loginV2_view.dart' as login;
 import 'package:rasca/views/login_view.dart';
@@ -27,7 +28,9 @@ class NavDrawer extends StatelessWidget {
             title: Text('Mis actividades'),
             onTap: () => {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => MyApp()))
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => ListaActividadesPendientes()))
             },
           ),
           ListTile(

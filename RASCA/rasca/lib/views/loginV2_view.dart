@@ -1,11 +1,11 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:rasca/views/UsuarioPerfil.dart';
 import 'package:rasca/controllers/login_controller.dart';
 import 'package:rasca/views/logout_view.dart';
 import 'package:http/http.dart' as http;
 import 'package:rasca/Clases/login.dart';
+import '../data.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage();
@@ -124,9 +124,12 @@ class _MyHomePageState extends State<MyHomePage> {
             } else if (pswController.text == '') {
               _showMyDialog(Text('Contraseña no ingresada'));
             } else {
-              String hola =
+              String token =
                   await loginAPI(userController.text, pswController.text);
-              if (hola != "Error") {
+              if (token != "Error") {
+                //Guardar token
+                Data.token = token;
+                //Siguiente página
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => PerfilUsuario()),
