@@ -1,10 +1,13 @@
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
+import 'package:rasca/views/Aprobacion.dart';
 import 'package:rasca/views/loginV2_view.dart';
 import 'package:rasca/views/transitionsRoutes_view.dart';
 import 'package:rasca/views/CrearActividad.dart';
 import 'package:rasca/views/UsuarioPerfil.dart';
 import 'package:rasca/views/Restricciones.dart';
+import 'package:rasca/views/DetalleActividad.dart';
+import 'package:rasca/views/Aprobacion.dart';
 
 void main() {
   SystemChrome.setSystemUIOverlayStyle(
@@ -58,9 +61,9 @@ class MyApp extends StatelessWidget {
         ),
       ),
       navigatorObservers: [TransitionRouteObserver()],
-      initialRoute: MyHomePage.routeName,
+      initialRoute: Aprobacion.routeName,
       routes: {
-        MyHomePage.routeName: (context) => MyHomePage(),
+        Aprobacion.routeName: (context) => Aprobacion(),
       },
     );
   }

@@ -96,7 +96,7 @@ class _Actividad extends State<Actividad> {
                   Container(
                     child: Text("Horas a Acreditar",
                     style: TextStyle(
-                      fontSize: 30,
+                      fontSize: 20,
                     ),),
                   ),
                   SizedBox(height: 20,),

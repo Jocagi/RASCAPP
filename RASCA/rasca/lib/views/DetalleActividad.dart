@@ -31,7 +31,34 @@ class _Detalle extends State<Detalle> {
         body: Padding(
           padding: const EdgeInsets.all(8.0),
           child: SingleChildScrollView(
-          child: Column(
+          child: Column(mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Container(
+                    child: Text("Nombre Actividad",
+                    style: TextStyle(
+                      fontSize: 30,
+                    ),),
+                  ),
+            Container(
+              child: Text("Feha Inicio:",
+                    style: TextStyle(
+                      fontSize: 30,
+                    ),),
+            ),
+            Container(
+              child: Text("Feha Fin:",
+                    style: TextStyle(
+                      fontSize: 30,
+                    ),),
+            ),
+            Container(
+              child: Text("Cupos disponibles:",
+                    style: TextStyle(
+                      fontSize: 30,
+                    ),),
+            )
+                ]
             )
           )
         )
