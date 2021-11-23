@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:rasca/views/CrearActividad.dart';
 import 'package:rasca/views/UsuarioPerfil.dart';
+import 'package:rasca/views/approveActivityList_view.dart';
 import 'package:rasca/views/dashboard_view.dart';
 import 'package:rasca/views/loginV2_view.dart' as login;
+import 'package:rasca/views/login_view.dart';
+import 'package:rasca/views/logout_view.dart';
 
 class NavDrawer extends StatelessWidget {
   @override
@@ -25,7 +28,9 @@ class NavDrawer extends StatelessWidget {
             title: Text('Mis actividades'),
             onTap: () => {
               Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => MyApp()))
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => ListaActividadesPendientes()))
             },
           ),
           ListTile(
@@ -38,7 +43,7 @@ class NavDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.settings),
-            title: Text('Peril'),
+            title: Text('Perfil'),
             onTap: () => {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => PerfilUsuario()))
@@ -57,7 +62,7 @@ class NavDrawer extends StatelessWidget {
             title: Text('Logout'),
             onTap: () => {
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => login.MyHomePage()))
+                  MaterialPageRoute(builder: (context) => LogoutScreen()))
             },
           ),
         ],
