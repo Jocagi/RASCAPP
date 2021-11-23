@@ -106,8 +106,8 @@ class _ListaActividadesPendientes extends State<ListaActividadesPendientes> {
                     );
                   } else if (item is MessageItem) {
                     return ListTile(
-                      title: Text(item.sender),
-                      subtitle: Text(item.body),
+                      title: Text(item.title),
+                      subtitle: Text(item.description),
                     );
                   }
                   //default
@@ -146,8 +146,8 @@ class HeadingItem implements ListItem {
 
 // Un ListItem que contiene datos para mostrar un mensaje
 class MessageItem implements ListItem {
-  final String sender;
-  final String body;
+  final String title;
+  final String description;
 
-  MessageItem(this.sender, this.body);
+  MessageItem(this.title, this.description);
 }
