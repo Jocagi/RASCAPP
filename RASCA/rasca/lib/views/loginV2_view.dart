@@ -1,11 +1,12 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:rasca/views/UsuarioPerfil.dart';
 import 'package:rasca/controllers/login_controller.dart';
 import 'package:rasca/views/logout_view.dart';
 import 'package:http/http.dart' as http;
 import 'package:rasca/Clases/login.dart';
+import '../data.dart';
+
 class MyHomePage extends StatefulWidget {
   MyHomePage();
   static const routeName = '/auth';
@@ -98,7 +99,7 @@ class _MyHomePageState extends State<MyHomePage> {
         filled: true,
         fillColor: Colors.white,
         contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-        hintText: "Contrase�a",
+        hintText: "Contraseña",
         suffixIcon: InkWell(
           onTap: _togglePasswordView,
           child: Icon(Icons.visibility),
@@ -108,7 +109,6 @@ class _MyHomePageState extends State<MyHomePage> {
     );
 
     final loginButton = Material(
-
       elevation: 5.0,
       borderRadius: BorderRadius.circular(30.0),
       color: Color(0xFFFFCD00),
@@ -124,9 +124,12 @@ class _MyHomePageState extends State<MyHomePage> {
             } else if (pswController.text == '') {
               _showMyDialog(Text('Contraseña no ingresada'));
             } else {
-              String hola =
+              String token =
                   await loginAPI(userController.text, pswController.text);
-              if (hola != "Error") {
+              if (token != "Error") {
+                //Guardar token
+                Data.token = token;
+                //Siguiente página
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => PerfilUsuario()),
@@ -149,6 +152,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     return Scaffold(
       resizeToAvoidBottomInset: false,
+      backgroundColor: Color(0xFF00205B),
       body: Center(
         child: Container(
           child: Padding(
