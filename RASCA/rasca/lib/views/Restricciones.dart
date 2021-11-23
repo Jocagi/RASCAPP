@@ -107,12 +107,11 @@ class _Restricciones extends State<Restricciones> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children:[
                   RaisedButton(onPressed: (){
-                    print("Nombre: "+_facultadController.text);
                     setState(() {
                     if(_facultadController.text.length<1)
                     _facultadError = "Debe agregar restricción";
                     else
-                    _facultadError = null; 
+                    Agregadas(context);
                     });
                     setState(() {
                     if(_anioController.text.length<1)
@@ -141,4 +140,17 @@ class _Restricciones extends State<Restricciones> {
       )
     );
   }
+}
+
+void Agregadas(BuildContext context){
+  var alertDialog = AlertDialog(
+    title: Text("Actualización"),
+    content: Text("Restricciones agregadas correctamente"),
+  );
+
+  showDialog(
+    context: context, 
+    builder: (BuildContext context){
+      return alertDialog;
+    });
 }

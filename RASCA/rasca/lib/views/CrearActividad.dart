@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:rasca/widgets/sideBar.dart';
+import 'package:rasca/views/Restricciones.dart';
 
 class Actividad extends StatefulWidget {
   Actividad();
@@ -114,7 +115,7 @@ class _Actividad extends State<Actividad> {
                               child: Text(
                                 "Horas a Acreditar",
                                 style: TextStyle(
-                                  fontSize: 30,
+                                  fontSize: 20,
                                 ),
                               ),
                             ),
@@ -166,12 +167,14 @@ class _Actividad extends State<Actividad> {
                                     border: OutlineInputBorder()),
                               ),
                             ),
-                            RaisedButton(
-                              onPressed: () {},
-                              color: Colors.grey,
-                              child: Text("Restricciones",
-                                  style: TextStyle(fontSize: 17)),
-                            ),
+                RaisedButton(onPressed: (){
+                    Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Restricciones() ),);     
+                     },
+                    color: Color(0xFFFFCD00),
+                    child: Text("Agregar Restricciones",
+                    style: TextStyle(fontSize: 17)),
+                      ),
                             Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
